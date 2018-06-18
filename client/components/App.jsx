@@ -6,6 +6,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       activeDrags: 0,
+
       deltaPosition: {
         x: 0,
         y: 0
@@ -49,7 +50,7 @@ class App extends React.Component {
     return (
       <div>
         <Draggable {...dragHandlers}>
-          <div className="box">I can be dragged anywhere</div>
+          <div className="box" />
         </Draggable>
       </div>
     );

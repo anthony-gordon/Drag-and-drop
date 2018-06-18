@@ -23191,6 +23191,7 @@ var App = function (_React$Component) {
 
     _this.state = {
       activeDrags: 0,
+
       deltaPosition: {
         x: 0,
         y: 0
@@ -23246,11 +23247,7 @@ var App = function (_React$Component) {
         _react2.default.createElement(
           _reactDraggable2.default,
           dragHandlers,
-          _react2.default.createElement(
-            "div",
-            { className: "box" },
-            "I can be dragged anywhere"
-          )
+          _react2.default.createElement("div", { className: "box" })
         )
       );
     }
