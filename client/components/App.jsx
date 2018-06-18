@@ -21,11 +21,6 @@ class App extends React.Component {
     this.onStop = this.onStop.bind(this);
   }
 
-  // eventLogger(e: MouseEvent, data: Object) {
-  //   console.log("Event: ", e);
-  //   console.log("Data: ", data);
-  // }
-
   handleDrag(e, ui) {
     const { x, y } = this.state.deltaPosition;
     this.setState({
@@ -48,10 +43,13 @@ class App extends React.Component {
   render() {
     const dragHandlers = { onStart: this.onStart, onStop: this.onStop };
     return (
-      <div>
-        <Draggable {...dragHandlers}>
-          <div className="box" />
-        </Draggable>
+      <div className="backgroundImage">
+        <img src="http://www.avso.org/wp-content/uploads/files/3/7/8/bedroom-wall-design-wall-decoration-behind-the-bed-0-378.jpg" />
+        <div className="draggable">
+          <Draggable {...dragHandlers}>
+            <div className="box" />
+          </Draggable>
+        </div>
       </div>
     );
   }

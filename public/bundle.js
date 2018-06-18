@@ -23207,11 +23207,6 @@ var App = function (_React$Component) {
     return _this;
   }
 
-  // eventLogger(e: MouseEvent, data: Object) {
-  //   console.log("Event: ", e);
-  //   console.log("Data: ", data);
-  // }
-
   _createClass(App, [{
     key: "handleDrag",
     value: function handleDrag(e, ui) {
@@ -23243,11 +23238,16 @@ var App = function (_React$Component) {
       var dragHandlers = { onStart: this.onStart, onStop: this.onStop };
       return _react2.default.createElement(
         "div",
-        null,
+        { className: "backgroundImage" },
+        _react2.default.createElement("img", { src: "http://www.avso.org/wp-content/uploads/files/3/7/8/bedroom-wall-design-wall-decoration-behind-the-bed-0-378.jpg" }),
         _react2.default.createElement(
-          _reactDraggable2.default,
-          dragHandlers,
-          _react2.default.createElement("div", { className: "box" })
+          "div",
+          { className: "draggable" },
+          _react2.default.createElement(
+            _reactDraggable2.default,
+            dragHandlers,
+            _react2.default.createElement("div", { className: "box" })
+          )
         )
       );
     }
